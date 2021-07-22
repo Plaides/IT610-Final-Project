@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		table, th, td
+			{
+			border: 1px solid black;
+			}
+	</style>
+</head>
+
+<body>
+	<h1>Inventory</h1>
+	<table>
+	  <tr>
+		<th>Workstation</th>
+		<th> purpose </th>
+		<th> location </th>
+		<th> macAddress </th>
+		<th> ipaddress </th>
+	  </tr>
+
+	  <?php include '/var/www/html/inventory.php';?>
+	</table>
+</body>
+</html>

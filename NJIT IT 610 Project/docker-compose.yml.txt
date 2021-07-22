@@ -1,0 +1,16 @@
+database:
+	build: ./Database
+	restart: always
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+webserver:
+	build: ./Webserver
+	restart: always
+    volumes:
+        - apache:./php/www:/var/www/html
+    ports: # this as webserver is internal only, there is no need to use HTTPS, though it is good practice
+        - 80:80
+        

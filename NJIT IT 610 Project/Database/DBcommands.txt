@@ -1,0 +1,18 @@
+create database IT610;
+
+use IT610;
+
+CREATE TABLE it610(
+  workstation VARCHAR(100),
+  purpose VARCHAR(40),
+  location VARCHAR(100),
+  macAddress VARCHAR(22),
+  ipaddress VARCHAR(22)
+);
+
+CREATE USER ‘dev’@’localhost’ IDENTIFIED BY 'pacman';
+CREATE USER ‘dev’@’%’ IDENTIFIED BY 'pacman';
+grant all privileges on IT610. it610 TO 'dev'@'localhost' identified by 'pacman';
+grant all privileges on IT610. it610 TO 'dev'@'%' identified by 'pacman';
+flush privileges;
+INSERT INTO table (workstation, purpose, location, macAddress, ipaddress ) VALUES (‘piZero’, ‘PiHole’, ‘by Router’, ’12:34:56:78:90:AB’, ‘192.168.1.1’), (‘Pi 4 B, ‘Kodi’, ‘by TV’, ’12:34:56:AB:CD:EF’, ‘192.168.1.7’);
